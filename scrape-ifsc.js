@@ -30,8 +30,6 @@ async function scrapeIFSCCalendar() {
                 .get()
                 .join(', ');
 
-            console.log('Found event:', { dateText, title, location, disciplines }); // Debug log
-
             // Parse date range with improved regex that handles month-spanning dates
             const dateMatch = dateText.match(/(\d{1,2})(?:([A-Za-z]+)|-)(\d{1,2})?([A-Za-z]+)?\s*(\d{4})/);
             
